@@ -1,0 +1,5 @@
+CREATE TABLE Narodowosc (
+	narodowoscID int PRIMARY KEY,
+    nazwa varchar(64) NOT NULL UNIQUE,
+    flaga varchar(64) UNIQUE
+);
