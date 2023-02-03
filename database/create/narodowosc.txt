@@ -3,3 +3,12 @@ CREATE TABLE Narodowosc (
     nazwa varchar(64) NOT NULL UNIQUE,
     flaga varchar(64) UNIQUE
 );
+
+CREATE TABLE Osoba(
+    osobaID int PRIMARY KEY,
+    imie varchar(24),
+    nazwisko varchar(32),
+    dataUrodzenia date,
+    narodowoscID int,
+    CONSTRAINT FK_OsobaNarodowosc FOREIGN KEY (narodowoscID) REFERENCES Narodowosc(narodowoscID)
+);
