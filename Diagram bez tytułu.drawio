@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-03T14:25:25.917Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="oWmY16AYL-IGX5rYLFUe" version="20.8.14" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-03T15:24:20.490Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="sh7llWc0U3VmXFjXXiaF" version="20.8.14" type="github">
   <diagram name="Strona-1" id="OfhFXtUXiZWUtCFE1TAF">
-    <mxGraphModel dx="5954" dy="4275" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2233" dy="2972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -156,7 +156,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-65" value="Osoba" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-800" y="-780" width="160" height="180" as="geometry" />
+          <mxGeometry x="-890" y="-750" width="160" height="180" as="geometry" />
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-66" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;rounded=0;" parent="VypSvn3y7kqC1WKXfnF2-65" vertex="1">
           <mxGeometry y="30" width="160" height="30" as="geometry" />
@@ -224,7 +224,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-84" value="Narodowosc" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-970" y="-660" width="130" height="120" as="geometry" />
+          <mxGeometry x="-1060" y="-630" width="130" height="120" as="geometry" />
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-85" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;rounded=0;" parent="VypSvn3y7kqC1WKXfnF2-84" vertex="1">
           <mxGeometry y="30" width="130" height="30" as="geometry" />
@@ -772,8 +772,8 @@
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-228" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="VypSvn3y7kqC1WKXfnF2-85" target="VypSvn3y7kqC1WKXfnF2-78" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-330" y="344" as="sourcePoint" />
-            <mxPoint x="-230" y="244" as="targetPoint" />
+            <mxPoint x="-420" y="374" as="sourcePoint" />
+            <mxPoint x="-320" y="274" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="VypSvn3y7kqC1WKXfnF2-255" value="Pracownik" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;fillColor=none;" parent="1" vertex="1">
