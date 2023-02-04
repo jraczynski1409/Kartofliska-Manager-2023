@@ -12,3 +12,16 @@ CREATE TABLE Osoba(
     narodowoscID int,
     CONSTRAINT FK_OsobaNarodowosc FOREIGN KEY (narodowoscID) REFERENCES Narodowosc(narodowoscID)
 );
+
+CREATE TABLE PracownicyOceny(
+    pracownikocenyID int PRIMARY KEY,
+    ambitnosc int NOT NULL,
+    pracowitosc int NOT NULL,
+    greenkeeping int NOT NULL,
+    marketing int NOT NULL,
+    finanse int NOT NULL,
+    skauting int NOT NULL,
+    couching int NOT NULL,
+    gotowanie int NOT NULL,
+    motywacja int NOT NULL
+);
