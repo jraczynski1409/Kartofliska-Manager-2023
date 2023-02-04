@@ -25,3 +25,13 @@ CREATE TABLE PracownicyOceny(
     gotowanie int NOT NULL,
     motywacja int NOT NULL
 );
+
+CREATE TABLE Pracownicy(
+	pracownikID int PRIMARY KEY,
+    osobaID int NOT NULL UNIQUE,
+    sredniaOcena int,
+    pracownikOcenyID int UNIQUE,
+    
+    CONSTRAINT FK_PracownikOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID),
+    CONSTRAINT FK_PracownikOceny FOREIGN KEY (pracownikOcenyID) REFERENCES PracownicyOceny(pracownikocenyID)
+);
