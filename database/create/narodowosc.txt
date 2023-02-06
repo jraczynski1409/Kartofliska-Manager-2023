@@ -13,8 +13,9 @@ CREATE TABLE Osoba(
     CONSTRAINT FK_OsobaNarodowosc FOREIGN KEY (narodowoscID) REFERENCES Narodowosc(narodowoscID)
 );
 
-CREATE TABLE PracownicyOceny(
-    pracownikocenyID int PRIMARY KEY,
+CREATE TABLE Pracownicy(
+    pracownikID int PRIMARY KEY,
+    osobaID int NOT NULL UNIQUE,
     ambitnosc int NOT NULL,
     pracowitosc int NOT NULL,
     greenkeeping int NOT NULL,
@@ -23,15 +24,7 @@ CREATE TABLE PracownicyOceny(
     skauting int NOT NULL,
     couching int NOT NULL,
     gotowanie int NOT NULL,
-    motywacja int NOT NULL
-);
-
-CREATE TABLE Pracownicy(
-	pracownikID int PRIMARY KEY,
-    osobaID int NOT NULL UNIQUE,
-    sredniaOcena int,
-    pracownikOcenyID int UNIQUE,
+    motywacja int NOT NULL,
     
-    CONSTRAINT FK_PracownikOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID),
-    CONSTRAINT FK_PracownikOceny FOREIGN KEY (pracownikOcenyID) REFERENCES PracownicyOceny(pracownikocenyID)
+    CONSTRAINT FK_PracownikOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID)
 );
