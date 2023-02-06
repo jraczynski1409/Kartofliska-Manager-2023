@@ -28,3 +28,45 @@ CREATE TABLE Pracownicy(
     
     CONSTRAINT FK_PracownikOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID)
 );
+
+CREATE TABLE Pilkarze(
+    pilkarzID int PRIMARY KEY,
+    osobaID int NOT NULL UNIQUE,
+    dlugiePodania int NOT NULL,
+    krotkiePodania int NOT NULL,
+    dosrodkowania int NOT NULL,
+    przerzuty int NOT NULL,
+    strzalyZDaleka int NOT NULL,
+    strzalyZBliska int NOT NULL,
+    wykonczenie int NOT NULL,
+    silaStrzalu int NOT NULL,
+    dalekieWolne int NOT NULL,
+    bliskieWolne int NOT NULL,
+    karne int NOT NULL,
+    rozne int NOT NULL,
+    kontrolaPilki int NOT NULL,
+    przyjecie int NOT NULL,
+    drybling int NOT NULL,
+    precyzja int NOT NULL,
+    sila int NOT NULL,
+    kondycja int NOT NULL,
+    szybkoscBiegu int NOT NULL,
+    przyspieszenie int NOT NULL,
+    glowki int NOT NULL,
+    parady int NOT NULL,
+    chwyt int NOT NULL,
+    refleks int NOT NULL,
+    wyrzut int NOT NULL,
+    odwaga int NOT NULL,
+    agresja int NOT NULL,
+    koncentracja int NOT NULL,
+    graBezPilki int NOT NULL,
+    wizja int NOT NULL,
+    pracaZespolowa int NOT NULL,
+    przywodczosc int NOT NULL,
+    odbiory int NOT NULL,
+    wslizgi int NOT NULL,
+    przechwyty int NOT NULL,
+    
+    CONSTRAINT FK_PilkarzOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID)
+);
