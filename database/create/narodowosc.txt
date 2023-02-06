@@ -70,3 +70,17 @@ CREATE TABLE Pilkarze(
     
     CONSTRAINT FK_PilkarzOsoba FOREIGN KEY (osobaID) REFERENCES Osoba(osobaID)
 );
+
+
+CREATE TABLE Stadiony(
+    stadionID int PRIMARY KEY,
+    trybunaS int NOT NULL,
+    trybunaN int NOT NULL,
+    trybunaE int NOT NULL,
+    trybunaW int NOT NULL,
+    oswietlenie int NOT NULL,
+    murawa int NOT NULL,
+    szatnie int NOT NULL,
+    zadaszenie int NOT NULL,
+    bramkiWejscowe int NOT NULL
+);
