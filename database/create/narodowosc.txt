@@ -84,3 +84,11 @@ CREATE TABLE Stadiony(
     zadaszenie int NOT NULL,
     bramkiWejscowe int NOT NULL
 );
+
+CREATE TABLE Liga(
+	ligaID int PRIMARY KEY,
+    nazwa varchar(64) NOT NULL UNIQUE,
+    szczebel int NOT NULL,
+    liczbaDruzyn int NOT NULL,
+    kodLigi varchar(6)
+);
