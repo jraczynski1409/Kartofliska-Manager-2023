@@ -101,3 +101,46 @@ CREATE TABLE Sezony(
     
     CONSTRAINT FK_SezonyLiga FOREIGN KEY (ligaID) REFERENCES Liga(ligaID)
 );
+
+CREATE TABLE Szkolki(
+	szkolkaID int PRIMARY KEY,
+    poziom int NOT NULL
+);
+
+CREATE TABLE Skauting(
+	szkautingID int PRIMARY KEY,
+    poziom int NOT NULL
+);
+
+CREATE TABLE Biuro(
+	biuroID int PRIMARY KEY,
+    poziom int NOT NULL
+);
+
+CREATE TABLE Sklep(
+	sklepID int PRIMARY KEY,
+    poziom int NOT NULL
+);
+
+CREATE TABLE Gastronomia(
+	gastronomiaID int PRIMARY KEY,
+    poziom int NOT NULL
+);
+
+CREATE TABLE CentraTreningowe(
+	centrumTreningoweID int PRIMARY KEY,
+    poziomBoiskaTreningowego int NOT NULL,
+    poziomBasenu int NOT NULL,
+    poziomSilowni int NOT NULL,
+    poziomSzkolenTaktycznych int NOT NULL
+);
+
+
+CREATE TABLE KasaBiletowa(
+	kasaBiletowaID int PRIMARY KEY,
+    poziom int NOT NULL,
+    biletUlgowy int NOT NULL,
+    biletNormalny int NOT NULL,
+    biletSenior int NOT NULL,
+    biletVIP int NOT NULL
+);
