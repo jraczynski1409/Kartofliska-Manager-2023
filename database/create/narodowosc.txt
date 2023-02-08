@@ -162,3 +162,21 @@ CREATE TABLE TrenerzyWSzkolce(
 	CONSTRAINT FK_TrenerSzkolka FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
     CONSTRAINT FK_SzkolkaTrener FOREIGN KEY (szkolkaID) REFERENCES Szkolki(szkolkaID)
 );
+
+CREATE TABLE SkauciWKlubie(
+    skauciWKlubieID int PRIMARY KEY,
+    pracownikID int NOT NULL,
+    skautingID int NOT NULL,
+    
+    CONSTRAINT FK_SkautKlub FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
+    CONSTRAINT FK_SkautSkauting FOREIGN KEY (skautingID) REFERENCES Skauting(szkautingID)
+);
+
+CREATE TABLE PracownicyBiura(
+	pracownikBiuraID int PRIMARY KEY,
+    pracownikID int NOT NULL,
+    biuroID int NOT NULL,
+    
+	CONSTRAINT FK_BiuroPrac FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
+    CONSTRAINT FK_PracBiuro FOREIGN KEY (biuroID) REFERENCES Biuro(biuroID)
+);
