@@ -208,3 +208,23 @@ CREATE TABLE PracownicyKas(
 	CONSTRAINT FK_PracKas FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
     CONSTRAINT FK_KasPrac FOREIGN KEY (kasaBiletowaID) REFERENCES KasaBiletowa(kasaBiletowaID)
 );
+
+
+CREATE TABLE Kompleks(
+	kompleksID int PRIMARY KEY,
+    szkolkaID int NOT NULL UNIQUE,
+    skautingID int NOT NULL UNIQUE,
+    biuroID int NOT NULL UNIQUE,
+    sklepID int NOT NULL UNIQUE,
+    gastronomiaID int NOT NULL UNIQUE,
+    centrumTreningoweID int NOT NULL UNIQUE,
+    kasyBiletoweID int NOT NULL UNIQUE,
+    
+    CONSTRAINT FK_kompleksSzkolka FOREIGN KEY (szkolkaID) REFERENCES Szkolki(szkolkaID),
+    CONSTRAINT FK_kompleksSkauting FOREIGN KEY (skautingID) REFERENCES Skauting(szkautingID),
+    CONSTRAINT FK_kompleksBiuro FOREIGN KEY (biuroID) REFERENCES Biuro(biuroID),
+    CONSTRAINT FK_kompleksSklep FOREIGN KEY (sklepID) REFERENCES Sklep(sklepID),
+    CONSTRAINT FK_kompleksGastronomia FOREIGN KEY (gastronomiaID) REFERENCES Gastronomia(gastronomiaID),
+    CONSTRAINT FK_kompleksCentrumTren FOREIGN KEY (centrumTreningoweID) REFERENCES CentraTreningowe(centrumTreningoweID),
+    CONSTRAINT FK_kompleksKasy FOREIGN KEY (kasyBiletoweID) REFERENCES KasaBiletowa(kasaBiletowaID)
+);
