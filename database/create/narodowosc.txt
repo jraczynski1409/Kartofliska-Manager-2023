@@ -246,3 +246,15 @@ CREATE TABLE Warunek(
     warunek int not null,
     kwota int
 );
+
+CREATE TABLE KontraktPracownika(
+	kontraktPracownikaID int PRIMARY KEY AUTO_INCREMENT,
+    pnt int not null,
+    dataPodpisu date not null,
+    dataZakonczenia date not NULL,
+    pracownikID int not null,
+    klubID int not null,
+    
+    CONSTRAINT FK_PracKont FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
+    CONSTRAINT FK_KlubKont FOREIGN KEY (klubID) REFERENCES Klub(klubID)
+);
