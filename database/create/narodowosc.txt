@@ -144,3 +144,12 @@ CREATE TABLE KasaBiletowa(
     biletSenior int NOT NULL,
     biletVIP int NOT NULL
 );
+
+CREATE TABLE MlodzikiWSzkolce(
+	mlodzikWSzkolceID int PRIMARY KEY,
+    pilkarzID int NOT NULL,
+    szkolkaID int NOT NULL,
+    
+	CONSTRAINT FK_PilkarzMlodzik FOREIGN KEY (pilkarzID) REFERENCES Pilkarze(pilkarzID),
+    CONSTRAINT FK_SzkolkaMlodzik FOREIGN KEY (szkolkaID) REFERENCES Szkolki(szkolkaID)
+);
