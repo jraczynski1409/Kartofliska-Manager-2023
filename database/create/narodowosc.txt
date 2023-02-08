@@ -258,3 +258,16 @@ CREATE TABLE KontraktPracownika(
     CONSTRAINT FK_PracKont FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
     CONSTRAINT FK_KlubKont FOREIGN KEY (klubID) REFERENCES Klub(klubID)
 );
+
+
+CREATE TABLE KontraktPilkarza(
+	kontraktPilkarzaID int PRIMARY KEY AUTO_INCREMENT,
+    pnt int not null,
+    dataPodpisu date not null,
+    dataZakonczenia date not NULL,
+    pilkarzID int not null,
+    klubID int not null,
+    
+    CONSTRAINT FK_PilkKont FOREIGN KEY (pilkarzID) REFERENCES Pilkarze(pilkarzID),
+    CONSTRAINT FK_KlubPilkKont FOREIGN KEY (klubID) REFERENCES Klub(klubID)
+);
