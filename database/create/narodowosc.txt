@@ -228,3 +228,14 @@ CREATE TABLE Kompleks(
     CONSTRAINT FK_kompleksCentrumTren FOREIGN KEY (centrumTreningoweID) REFERENCES CentraTreningowe(centrumTreningoweID),
     CONSTRAINT FK_kompleksKasy FOREIGN KEY (kasyBiletoweID) REFERENCES KasaBiletowa(kasaBiletowaID)
 );
+
+CREATE TABLE Klub(
+	klubID int PRIMARY KEY AUTO_INCREMENT,
+    nazwa varchar(64) not null,
+    budzet int NOT NULL,
+    stadionID int NOT NULL,
+ 	kompleksID int NOT NULL,
+    
+    CONSTRAINT FK_stadionKlub FOREIGN KEY (stadionID) REFERENCES Stadiony(stadionID),
+    CONSTRAINT FK_stadionKompleks FOREIGN KEY (kompleksID) REFERENCES Kompleks(kompleksID)
+);
