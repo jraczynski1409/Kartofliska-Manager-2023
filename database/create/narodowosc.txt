@@ -239,3 +239,10 @@ CREATE TABLE Klub(
     CONSTRAINT FK_stadionKlub FOREIGN KEY (stadionID) REFERENCES Stadiony(stadionID),
     CONSTRAINT FK_stadionKompleks FOREIGN KEY (kompleksID) REFERENCES Kompleks(kompleksID)
 );
+
+CREATE TABLE Warunek(
+	warunekID int PRIMARY KEY AUTO_INCREMENT,
+    typ varchar(24) not null,
+    warunek int not null,
+    kwota int
+);
