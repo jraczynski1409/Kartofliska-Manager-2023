@@ -199,3 +199,12 @@ CREATE TABLE PracownicyCentrum(
 	CONSTRAINT FK_PracCent FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
     CONSTRAINT FK_centTren FOREIGN KEY (centrumTreningoweID) REFERENCES CentraTreningowe(centrumTreningoweID)
 );
+
+CREATE TABLE PracownicyKas(
+	kucharzID int PRIMARY KEY,
+    pracownikID int NOT NULL,
+    kasaBiletowaID int NOT NULL,
+    
+	CONSTRAINT FK_PracKas FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
+    CONSTRAINT FK_KasPrac FOREIGN KEY (kasaBiletowaID) REFERENCES KasaBiletowa(kasaBiletowaID)
+);
