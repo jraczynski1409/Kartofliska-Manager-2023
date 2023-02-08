@@ -180,3 +180,12 @@ CREATE TABLE PracownicyBiura(
 	CONSTRAINT FK_BiuroPrac FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
     CONSTRAINT FK_PracBiuro FOREIGN KEY (biuroID) REFERENCES Biuro(biuroID)
 );
+
+CREATE TABLE PracownicySklepu(
+	pracownikSklepuID int PRIMARY KEY,
+    pracownikID int NOT NULL,
+    sklepID int NOT NULL,
+    
+	CONSTRAINT FK_SklepPrac FOREIGN KEY (pracownikID) REFERENCES Pracownicy(pracownikID),
+    CONSTRAINT FK_PracSklep FOREIGN KEY (sklepID) REFERENCES Sklep(sklepID)
+);
