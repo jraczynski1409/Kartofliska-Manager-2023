@@ -280,3 +280,22 @@ CREATE TABLE WarunkiKontraktu(
     CONSTRAINT FK_warKont FOREIGN KEY (warunekID) REFERENCES Warunek(warunekID),
     CONSTRAINT FK_kontWar FOREIGN KEY (kontraktID) REFERENCES KontraktPilkarza(kontraktPilkarzaID)
 );
+
+CREATE TABLE Sponsor(
+	sponsorID int PRIMARY KEY AUTO_INCREMENT,
+    nazwa varchar(32) not null,
+    opis varchar(224) not null,
+    wartoscFirmy int not null
+);
+
+CREATE TABLE KontraktSponsor(
+	kontraktSponsorID int PRIMARY KEY AUTO_INCREMENT,
+    pnt int not null,
+    dataPodpisu date not null,
+    dataZakonczenia date not null,
+    klubID int not null,
+    sponsorID int not null,
+    
+    CONSTRAINT FK_sponsKont FOREIGN KEY (sponsorID) REFERENCES Sponsor(sponsorID),
+    CONSTRAINT FK_sponsKlub FOREIGN KEY (klubID) REFERENCES Klub(klubID)
+);
