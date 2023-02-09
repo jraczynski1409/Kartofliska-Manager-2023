@@ -304,3 +304,18 @@ CREATE TABLE Zdarzenie(
 	zdarzenieID int PRIMARY KEY AUTO_INCREMENT,
     typ varchar(32) not null
 );
+
+CREATE TABLE KlubWSezonie(
+	klubWsezonieID int PRIMARY KEY AUTO_INCREMENT,
+    klubID int not null,
+    sezonID int not null,
+    W int not null,
+    D int not null,
+    L int not null,
+    GS int not null,
+    GC int not null,
+    punkty int not null,
+    
+    CONSTRAINT FK_KlubSezon FOREIGN KEY (klubID) REFERENCES Klub(klubID),
+    CONSTRAINT FK_SezonKlub FOREIGN KEY (sezonID) REFERENCES Sezony(sezonID)
+);
