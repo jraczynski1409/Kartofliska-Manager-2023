@@ -1,11 +1,11 @@
 CREATE TABLE Narodowosc (
-	narodowoscID int PRIMARY KEY,
+	narodowoscID int PRIMARY KEY AUTO_INCREMENT,
     nazwa varchar(64) NOT NULL UNIQUE,
     flaga varchar(64) UNIQUE
 );
 
 CREATE TABLE Osoba(
-    osobaID int PRIMARY KEY,
+    osobaID int PRIMARY KEY AUTO_INCREMENT,
     imie varchar(24),
     nazwisko varchar(32),
     dataUrodzenia date,
@@ -14,7 +14,7 @@ CREATE TABLE Osoba(
 );
 
 CREATE TABLE Pracownicy(
-    pracownikID int PRIMARY KEY,
+    pracownikID int PRIMARY KEY AUTO_INCREMENT,
     osobaID int NOT NULL UNIQUE,
     ambitnosc int NOT NULL,
     pracowitosc int NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE Pracownicy(
 );
 
 CREATE TABLE Pilkarze(
-    pilkarzID int PRIMARY KEY,
+    pilkarzID int PRIMARY KEY AUTO_INCREMENT,
     osobaID int NOT NULL UNIQUE,
     dlugiePodania int NOT NULL,
     krotkiePodania int NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE Pilkarze(
 
 
 CREATE TABLE Stadiony(
-    stadionID int PRIMARY KEY,
+    stadionID int PRIMARY KEY AUTO_INCREMENT,
     trybunaS int NOT NULL,
     trybunaN int NOT NULL,
     trybunaE int NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE Stadiony(
 );
 
 CREATE TABLE Liga(
-	ligaID int PRIMARY KEY,
+	ligaID int PRIMARY KEY AUTO_INCREMENT,
     nazwa varchar(64) NOT NULL UNIQUE,
     szczebel int NOT NULL,
     liczbaDruzyn int NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE Liga(
 
 
 CREATE TABLE Sezony(
-	sezonID int PRIMARY KEY,
+	sezonID int PRIMARY KEY AUTO_INCREMENT,
     ligaID int NOT NULL,
     rok varchar(9) NOT NULL,
     
@@ -103,32 +103,32 @@ CREATE TABLE Sezony(
 );
 
 CREATE TABLE Szkolki(
-	szkolkaID int PRIMARY KEY,
+	szkolkaID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL
 );
 
 CREATE TABLE Skauting(
-	szkautingID int PRIMARY KEY,
+	szkautingID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL
 );
 
 CREATE TABLE Biuro(
-	biuroID int PRIMARY KEY,
+	biuroID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL
 );
 
 CREATE TABLE Sklep(
-	sklepID int PRIMARY KEY,
+	sklepID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL
 );
 
 CREATE TABLE Gastronomia(
-	gastronomiaID int PRIMARY KEY,
+	gastronomiaID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL
 );
 
 CREATE TABLE CentraTreningowe(
-	centrumTreningoweID int PRIMARY KEY,
+	centrumTreningoweID int PRIMARY KEY AUTO_INCREMENT,
     poziomBoiskaTreningowego int NOT NULL,
     poziomBasenu int NOT NULL,
     poziomSilowni int NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE CentraTreningowe(
 
 
 CREATE TABLE KasaBiletowa(
-	kasaBiletowaID int PRIMARY KEY,
+	kasaBiletowaID int PRIMARY KEY AUTO_INCREMENT,
     poziom int NOT NULL,
     biletUlgowy int NOT NULL,
     biletNormalny int NOT NULL,
@@ -146,7 +146,7 @@ CREATE TABLE KasaBiletowa(
 );
 
 CREATE TABLE MlodzikiWSzkolce(
-	mlodzikWSzkolceID int PRIMARY KEY,
+	mlodzikWSzkolceID int PRIMARY KEY AUTO_INCREMENT,
     pilkarzID int NOT NULL,
     szkolkaID int NOT NULL,
     
@@ -155,7 +155,7 @@ CREATE TABLE MlodzikiWSzkolce(
 );
 
 CREATE TABLE TrenerzyWSzkolce(
-	trenerzyWSzkolceID int PRIMARY KEY,
+	trenerzyWSzkolceID int PRIMARY KEY AUTO_INCREMENT,
     pracownikID int NOT NULL,
     szkolkaID int NOT NULL,
     
@@ -164,7 +164,7 @@ CREATE TABLE TrenerzyWSzkolce(
 );
 
 CREATE TABLE SkauciWKlubie(
-    skauciWKlubieID int PRIMARY KEY,
+    skauciWKlubieID int PRIMARY KEY AUTO_INCREMENT,
     pracownikID int NOT NULL,
     skautingID int NOT NULL,
     
@@ -173,7 +173,7 @@ CREATE TABLE SkauciWKlubie(
 );
 
 CREATE TABLE PracownicyBiura(
-	pracownikBiuraID int PRIMARY KEY,
+	pracownikBiuraID int PRIMARY KEY AUTO_INCREMENT, 
     pracownikID int NOT NULL,
     biuroID int NOT NULL,
     
@@ -182,7 +182,7 @@ CREATE TABLE PracownicyBiura(
 );
 
 CREATE TABLE PracownicySklepu(
-	pracownikSklepuID int PRIMARY KEY,
+	pracownikSklepuID int PRIMARY KEY AUTO_INCREMENT,
     pracownikID int NOT NULL,
     sklepID int NOT NULL,
     
@@ -192,7 +192,7 @@ CREATE TABLE PracownicySklepu(
 
 
 CREATE TABLE PracownicyCentrum(
-	kucharzID int PRIMARY KEY,
+	kucharzID int PRIMARY KEY AUTO_INCREMENT,
     pracownikID int NOT NULL,
     centrumTreningoweID int NOT NULL,
     
@@ -201,7 +201,7 @@ CREATE TABLE PracownicyCentrum(
 );
 
 CREATE TABLE PracownicyKas(
-	kucharzID int PRIMARY KEY,
+	kucharzID int PRIMARY KEY AUTO_INCREMENT,
     pracownikID int NOT NULL,
     kasaBiletowaID int NOT NULL,
     
@@ -211,7 +211,7 @@ CREATE TABLE PracownicyKas(
 
 
 CREATE TABLE Kompleks(
-	kompleksID int PRIMARY KEY,
+	kompleksID int PRIMARY KEY AUTO_INCREMENT,
     szkolkaID int NOT NULL UNIQUE,
     skautingID int NOT NULL UNIQUE,
     biuroID int NOT NULL UNIQUE,
