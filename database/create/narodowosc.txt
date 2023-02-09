@@ -342,3 +342,13 @@ CREATE TABLE PrzebiegMeczu(
     CONSTRAINT fk_pmMecz FOREIGN KEY (meczID) REFERENCES Mecz(meczID),
     CONSTRAINT fk_pmPilk FOREIGN KEY (pilkarzID) REFERENCES Pilkarze(pilkarzID)
 );
+
+CREATE TABLE OcenyMeczowe(
+    ocenyMeczoweID int PRIMARY KEY AUTO_INCREMENT,
+    meczID int not null,
+    pilkarzID int not null,
+    ocena int,
+    
+    CONSTRAINT fk_omMecz FOREIGN KEY (meczID) REFERENCES Mecz(meczID),
+    CONSTRAINT fk_omPilk FOREIGN KEY (pilkarzID) REFERENCES Pilkarze(pilkarzID)
+);
