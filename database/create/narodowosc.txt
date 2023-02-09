@@ -299,3 +299,8 @@ CREATE TABLE KontraktSponsor(
     CONSTRAINT FK_sponsKont FOREIGN KEY (sponsorID) REFERENCES Sponsor(sponsorID),
     CONSTRAINT FK_sponsKlub FOREIGN KEY (klubID) REFERENCES Klub(klubID)
 );
+
+CREATE TABLE Zdarzenie(
+	zdarzenieID int PRIMARY KEY AUTO_INCREMENT,
+    typ varchar(32) not null
+);
