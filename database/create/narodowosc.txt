@@ -331,3 +331,14 @@ CREATE TABLE Mecz(
     CONSTRAINT fk_goscMecz FOREIGN KEY (goscID) REFERENCES Klub(klubID),
     CONSTRAINT fk_sezonMecz FOREIGN KEY (sezonID) REFERENCES Sezony(sezonID)
 );
+
+CREATE TABLE PrzebiegMeczu(
+    przebiegMeczuID int PRIMARY KEY AUTO_INCREMENT,
+    zdarzenieID int NOT null,
+    meczID int not null,
+    pilkarzID int not null,
+    
+    CONSTRAINT fk_pmZdarz FOREIGN KEY (zdarzenieID) REFERENCES Zdarzenie(zdarzenieID),
+    CONSTRAINT fk_pmMecz FOREIGN KEY (meczID) REFERENCES Mecz(meczID),
+    CONSTRAINT fk_pmPilk FOREIGN KEY (pilkarzID) REFERENCES Pilkarze(pilkarzID)
+);
