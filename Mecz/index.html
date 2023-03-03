@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <script src="script.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+        
+    </head>
+    
+    <body>
+        <div id="mainContainer">
+            <div id="playerInfo">
+                <div id="leftTop" class="top">
+                    <div class="icon"><img src="icons/back.png"></div>
+                </div>
+                <div id="centerTop" class="top">
+                    <div id=matchInfo>
+                        <div class="matchTeam" id="matchHome">
+                            <div class="matchBadge" id="matchHomeBadge">
+                                <img class="matchBadgeImg" src="images/badges/1.png">
+                            </div>
+                            <div class="matchName" id="matcHomeName">
+                                Korona
+                            </div>
+                        </div>
+                        <div id="centerMatchInfo">
+                            <div id="matchDateTime">
+                                <div id="matchDate">04.03.2023</div>
+                                <div id="matchTime">17:30</div>
+                            </div>
+                            <div id="result">
+                                <div class="goalsCounter" id="homeGoals">?</div>
+                                <div id="vs">:</div>
+                                <div class="goalsCounter" id="awayGoals">?</div>
+                            </div>
+                        </div>
+                        <div class="matchTeam" id="matchAway">
+                            <div class="matchBadge" id="matchAwayBadge">
+                                <img class="matchBadgeImg" src="images/badges/2.png">
+                            </div>
+                            <div class="matchName playerTeam" id="matchAwayName">
+                                Spratakus
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightTop" class="top">
+                    <div class="icon"><img src="icons/done.png"></div>
+                </div>
+            </div>
+            
+            <div class="arrow" id="leftArrow">
+                <div class="icon"><img src="icons/left.png"></div>
+            </div>
+            
+            <div class="arrow" id="rightArrow">
+                <div ><img class="icon" src="icons/right.png"></div>
+            </div>
+            
+            <div class="mainWindow" id="analizaPrzeciwnika">
+                <h2 class="windowHeader">Analiza przeciwnika</h2>
+                <div id="mainContent">
+                 
+                    <img id="enemyPitch" src="./images/elements/pitch.jpg">
+                    <div id="mainContentCenter">
+                        
+                        <h3 class="windowHeader2" id="teamAnalize">Raport analityka</h3>
+                        <div id="EnemyAnalizeDesc">Zespoł Korona jest w dobrej formie. W ostatnich 3 meczach zdobyła 7 punktów. Główną postacią jest środkowy pomocnik Nono, na którego powinnismy zwróćić większą uwagę. Korona w ataku stara rozgrywac się piłkę środkiem boiska. Po stracie piłki przechodzą do gry w pressingu. W obronie ich linia pomocy zamienia się w drugą linię obrony.</div>
+                    </div>
+                    
+                    <div id="mainContentRight">
+                        <h3 class="windowHeader2" id="teamAnalize">Ostatnie mecze</h3>
+                        <div class="lastMatchResult">
+                            <div class="win"></div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+            </div>
+            
+            <div id="stopkaInfo">
+                Kartofilska Manager &copy; 2023
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to right, #6ddbb6 50%, #7fffd4 50%);
+    background-size: 350px;
+    background-position: center;
+    overflow: hidden;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 0.5px;
+    color: #111;
+
+}
+
+.mainWindow{
+    width: 70vw;
+    height: 75vh;
+    background-color: #ffffffee;
+    border-radius: 16px; 
+    margin: 5px;
+    padding: 20px;
+    margin-top: 52px;
+    
+    border:2px solid #444;
+}
+
+
+#mainContainer{
+    color:#444;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    align-items:center; 
+    justify-content: center;
+}
+
+#stopkaInfo{
+    width: 100vw;
+    height: 24px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #3a725f;
+    color: #111;
+    line-height: 24px;
+    text-align: center;
+    border-top:2px solid #444;
+}
+
+#playerInfo{
+    width: 100vw;
+    height: 64px;
+    background-color: #fffe;
+    position: fixed;
+    top:0;
+    right:0;
+    
+    border-bottom:2px solid #444;
+}
+
+#leftTop {
+    width: 30%;
+    height: 50px;
+    padding: 6px;
+}
+
+.top {
+    display: inline-block;
+    
+   margin-top:-18px;
+    
+}
+
+#rightTop {
+    width: 30%;
+    height: 50px;
+    padding: 6px;
+    text-align: right;
+}
+
+#centerTop {
+    text-align: center;
+    height: 80px;
+    padding-top: 25px;
+    background-color: #53a589;
+    width: 35%;
+    border-radius: 25px;
+    
+    border:2px solid #444;
+}
+
+.arrow{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    margin-top: 3px;
+    border-radius: 25px;
+    background-color: #fffe;
+    
+    border:2px solid #444;
+}
+
+#leftArrow{
+    left: 3%;
+}
+
+#rightArrow{
+    right:3%;
+}
+.icon2 {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+
+
+
+#matchInfo {
+    display:flex;
+    color: #111;
+}
+
+.matchTeam {
+    display: grid;
+    width: 30%;
+}
+
+.matchBadge {
+    width: 100%;
+}
+
+.matchName {
+    font-size: 13px;
+}
+
+#result {
+    display: inline-flex;
+    width: 40%;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px
+    
+}
+
+.goalsCounter {
+    width:50%;
+    font-size: 50px;
+    margin:
+}
+
+.matchBadgeImg {
+    width: 48px;
+}
+
+#matchAwayName {
+    
+}
+
+.playerTeam {
+    font-weight: 600;
+    color:#900;
+}
+
+#centerMatchInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 70px;
+}
+
+#matchDateTime {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+h2 {
+    
+}
+
+.windowHeader {
+    margin: 5px 0px;
+    display: block;
+    border-bottom: 2px solid #444;
+    padding-bottom: 3px;
+    text-indent: 20px;
+    
+}
+
+
+
+#squadEnemyWindow {
+    width: 357px;
+    height: 522px;
+}
+
+#enemyPitch {
+    border:3px solid #444;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.windowHeader2 {
+    font-weight: 300;
+    
+    margin: 5px 0px;
+    text-align:center;
+    border-bottom: 1px dashed #999;
+}
+
+#mainContent {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+    
+}
+
+#teamAnalize {
+
+}
+
+#mainContentCenter {
+    width: 33%;
+    border-right: 1px solid #999;
+    padding: 2px 10px ;
+}
+
+#mainContentRight {
+    width: 33%;
+    padding: 2px 10px ;
+}
+
+#EnemyAnalizeDesc {
+    font-size: 13px;
+    font-weight: 300;
+    text-align: justify;
+    text-indent:2px;
+    letter-spacing: 0px;
+}
+
+.win {
+    content: 'Z';
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    background-color: #9f9;
+    border
+    text-align: center;
+    line-height: 24px;
+}
