@@ -3,20 +3,20 @@ body{
     background-image: linear-gradient(to right, #6ddbb6 50%, #7fffd4 50%);
     background-size: 350px;
     background-position: center;
-    overflow: hidden;
     font-family: 'Patrick Hand', cursive;
     letter-spacing: 0.5px;
     color: #111;
+    overflow-x: hidden;
 
 }
 
 .mainWindow{
     width: 70vw;
-    height: 75vh;
+    min-height: 75vh;
     background-color: #ffffffee;
     padding-bottom: 20px;
     margin: 5px;
-    margin-top: 52px;
+    margin-top: 96px;
     
     border:2px solid #444;
     padding-left: 20px;
@@ -27,8 +27,8 @@ body{
 #mainContainer{
     color:#444;
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     margin: auto;
     align-items:center; 
     justify-content: center;
@@ -203,7 +203,9 @@ h2 {
 #enemyPitch {
     border:3px solid #444;
     border-radius: 15px;
-    margin-top: 10px;
+    
+    width: 100%;
+    z-index: 1;
 }
 
 .windowHeader2 {
@@ -352,4 +354,290 @@ h2 {
 
 .rivalFotballerName {
     font-weight: 600
+}
+
+.miniDesc {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-indent: 3px;
+}
+
+.statsBarBackground {
+    margin-top: -4px;
+    width: 100%;
+    height: 24px;
+    background-color: #efefef;
+    line-height: 12px;
+    font-size: 14px;
+    border: 1px solid #444;
+    
+}
+
+.statsBarInsideLeague {
+    height: 12px;
+    background-color: #77f8;
+    text-align: center;
+    color:#007;
+    
+}
+
+.statsBarInsideRival {
+    height: 12px;
+    background-color: #f77;
+    text-align: center;
+    color:#700;
+}
+
+
+
+
+
+
+
+.goodSite {
+    margin: 0px;
+    font-size: 17px;
+    display: block;
+}
+
+.goodSide {
+    background-color: #ded;
+    padding: 10px;
+    border:1px solid #bcb;
+}
+
+.badSide {
+    background-color: #edd;
+    padding: 10px;
+    border:1px solid #cbb;
+}
+
+.formacja {
+    font-size: 20px;
+}
+
+.betTypes {
+    width: 100%;
+    height: 64px;
+    background-color: #eee;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #ccc;
+    
+}
+
+.betType {
+    display: flex;
+    flex: 30%;
+    margin: 1%;
+    height: 48px;
+    background-color: #fff;
+    border-radius: 9px;
+    
+}
+
+.bukLogo {
+    width: 48px;
+    height: 48px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+#rivalLegend {
+    font-size: 11px;
+    line-height: 10px;
+}
+
+.iconLegend {
+    width: 24px;
+    height: 12px;
+    margin: 0px;
+    display: inline-block;   
+    margin-top: 3px;
+    line-height: 12px;
+}
+
+.red {
+    background-color: #f77;
+}
+
+.blue {
+    
+    background-color: #77f8;
+}
+
+.bet {
+    flex: 10%;
+    background-color: #eee;
+    height: 20px;
+    text-align: center;
+    margin: 10px;
+    margin-top: -5px;
+}
+
+.bet1x2 {
+    flex:75%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 0px 5px;
+    
+}
+
+.bet1::after {
+    content: "1";
+    width: inherit;
+    display: block;
+    font-size: 12px;
+}
+
+.bet0::after {
+    content: "X";
+    width: inherit;
+    display: block;
+    font-size: 12px;
+}
+
+.bet2::after {
+    content: "2";
+    width: inherit;
+    display: block;
+    font-size: 12px;
+}
+
+#leagueTable td{
+    padding:1px 4px;
+    margin:1px;
+    background-color: #e7e7e7;
+}
+
+#leagueTable th{
+    background-color: #dfd
+}
+
+#rivalTable td{
+    background-color: #ada
+}
+
+#leagueTable {
+    width: 100%;
+}
+
+#benchTable {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.tableDGrey {
+    background-color: #e8e8e8;
+}
+
+.tableGrey {
+    background-color: #f3f3f3;
+}
+
+
+
+#benchTable th{
+    background-color: #ccc;
+}
+
+.benchTableName {
+    text-align: left;
+}
+
+#pitch {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.pitchPlayer {
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    color: #111;
+    
+    margin-left: -40px;
+    
+}
+
+.pitchPlayerKit {
+    width: 100%;
+}
+
+.pitchPlayerNumber {
+    width: 100%;
+    text-align: center;
+    margin-top: -50px;
+    line-height: 50px;
+    font-size: 22px;
+    text-shadow: 1px 1px #fff
+}
+
+.pitchPlayerOverall {
+    width: 35px;
+    font-size: 23px;
+    line-height: 25px;
+    border-top-right-radius: 20px;
+    border-bottom: 3px solid #c2a606;
+    background-color: #e6d919;
+    text-align: center;
+    text-indent:-5px;
+    margin-top:-33px;
+    margin-left: 40px;
+    letter-spacing: -2px;
+}
+
+.pitchPlayerName {
+    width: 75px;
+    margin-left: 5px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 14px;
+    font-size: 13px;
+    border-bottom: 2px solid #999;
+
+}
+
+.gk {
+    bottom:5px;
+    left: 50%;
+}
+
+.lo {
+    bottom:80px;
+    left: 8px;
+}
+
+.po {
+    right: 0px;
+    bottom:80px;
+}
+
+.pso {
+    bottom: 70px;
+    right: 80px
+}
+
+.lso {
+    
+    bottom: 70px;
+    left: 88px
+
+}
+
+.sso {
+    bottom:70px;
+    left: 50%;
+}
+
+.spd {
+    left: 50%;
+    bottom:135px
 }
